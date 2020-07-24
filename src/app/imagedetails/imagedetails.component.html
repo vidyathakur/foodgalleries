@@ -54,13 +54,13 @@
 </div></div>
   <div class="col-sm-7" >
     <div class="product-info">
-  <div class="product-content" style="margin-left: 45px;">
+  <div class="product-content">
     <a routerLink="/gallery" style="float: right">Back</a>
     <h1>{{responseData.title["_content"]}}</h1>
     <p>{{responseData.description["_content"]}}</p>
   </div>
     </div>
-    <div class="form_main" style="margin-left: 45px;">
+    <div class="form_main" >
   <h4 class="heading"><strong>Review </strong> Form <span></span></h4>
   <div class="form">
     <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
