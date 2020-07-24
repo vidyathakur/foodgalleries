@@ -1,8 +1,8 @@
-.container {
+/*.container {
   width: 100%;
   height: 100%;
-}
-.container .product {
+}*/
+.container-fluid .product {
   /*width: 610px;
   height: 250px;*/
   display: flex;
@@ -19,10 +19,10 @@
 .container .product .img-container {
   flex: 2;
 }
-.container .product .img-container img {
+.container-fluid .product .img-container img {
   object-fit: cover;
   width: 100%;
-  height: 100%;
+  height: 460px;
 }
 .container .product .product-info {
   background: #fff;
@@ -136,12 +136,18 @@ form_main {
     margin: 10px 0;
     padding: 0;
     text-transform: uppercase;
-    width: 30%;
+    min-width: 30%;
 }
 .txt2:hover {
     background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
     color: #5793ef;
     transition: all 0.5s ease 0s;
+}
+
+@media(max-width: 200px) {
+   .txt2[type="submit"]{
+     width: 30%;
+   }
 }
 
 
