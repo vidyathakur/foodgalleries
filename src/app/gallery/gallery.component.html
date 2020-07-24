@@ -1,0 +1,33 @@
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Freebie: 4 Bootstrap Gallery Templates</title>
+
+
+</head>
+
+
+  <div class="container gallery-container">
+
+    <h1>Flicker Food Galleries</h1>
+
+    <!--<p class="page-description text-center">Grid Layout With Zoom Effect</p>-->
+
+    <div class="tz-gallery">
+
+      <div class="row">
+        <div class="col-sm-6 col-md-4" *ngFor="let imageList of galleryImage">
+          <a class="lightbox" href="javascript:void(0)" (click)="imageDetails(imageList.id)">
+            <img src="https://farm{{imageList.farm}}.staticflickr.com/{{imageList.server}}/{{imageList.id}}_{{imageList.secret}}.jpg">
+      <div class="bottom-right"><i class="fa fa-star-o" style="font-size:20px; color:#fff;"></i>{{imageList.user_rating}}</div>
+      <div class="bottom-left"><p>{{imageList.title}}</p></div>
+          </a>
+        </div>        
+      </div>
+
+    </div>
+
+  </div>
