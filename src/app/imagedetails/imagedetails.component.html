@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<!--<div class="container-fluid">
   <div class="col-md-5"><div class="product">
   <div class="img-container">
     <img src="https://farm{{responseData.farm}}.staticflickr.com/{{responseData.server}}/{{responseData.id}}_{{responseData.secret}}.jpg">
@@ -11,11 +11,11 @@
     <h1>{{responseData.title["_content"]}}</h1>
     <p>{{responseData.description["_content"]}}</p>
 
-    <div class="form_main" style="width: 50%;">
+    <div class="form_main" >
       <h4 class="heading"><strong>Review </strong> Form <span></span></h4>
       <div class="form">
         <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
-          <input type="text" formControlName="name" id="name" required="" placeholder="Please input your Name" value="" name="name"
+          <input type="text" formControlName="name"  id="name" required="" placeholder="Please input your Name" value="" name="name"
             class="txt">
           <textarea placeholder="Description" id="description" formControlName="description" type="text" class="txt_3"></textarea>
           <div class="rating">
@@ -40,9 +40,65 @@
    
   </div>
 
-  <!--<div class="row">
+  <!<div class="row">
     <div class="col-md-4">
       
     </div> </div>-->
- 
+ <div class="container-fluid">
+<div class="row">
+  <div class="col-sm-5" >
+    <div class="product">
+  <div class="img-container">
+    <img src="https://farm{{responseData.farm}}.staticflickr.com/{{responseData.server}}/{{responseData.id}}_{{responseData.secret}}.jpg">
+  </div>
+</div></div>
+  <div class="col-sm-7" >
+    <div class="product-info">
+  <div class="product-content" style="margin-left: 45px;">
+    <a routerLink="/gallery" style="float: right">Back</a>
+    <h1>{{responseData.title["_content"]}}</h1>
+    <p>{{responseData.description["_content"]}}</p>
+  </div>
+    </div>
+    <div class="form_main" style="margin-left: 45px;">
+  <h4 class="heading"><strong>Review </strong> Form <span></span></h4>
+  <div class="form">
+    <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+  <div class="row">
+
+    <div class="col-75">
+      <input type="text" id="name" formControlName="name" name="firstname" placeholder="Your name..">
+    </div>
+  </div>
+  <div class="row">
+
+    <div class="col-75">
+      <textarea id="description" name="description" formControlName="description" placeholder="Write something.." style="height:70px"></textarea>
+    </div>
+  </div>
+  <div class="row">
+
+  <div class="col-75">
+   <div class="rating">
+  <input type="radio" id="star10" formControlName="rating" value="10" /><label for="star10">5 stars</label>
+  <input type="radio" id="star9" formControlName="rating" value="9" /><label for="star9">4 stars</label>
+  <input type="radio" id="star8" formControlName="rating" value="8" /><label for="star8">3 stars</label>
+  <input type="radio" id="star7" formControlName="rating" value="7" /><label for="star7">2 stars</label>
+  <input type="radio" id="star6" formControlName="rating" value="6" /><label for="star6">1 star</label>
+  <input type="radio" id="star5" formControlName="rating" value="5" /><label for="star5">5 stars</label>
+  <input type="radio" id="star4" formControlName="rating" value="4" /><label for="star4">4 stars</label>
+  <input type="radio" id="star3" formControlName="rating" value="3" /><label for="star3">3 stars</label>
+  <input type="radio" id="star2" formControlName="rating" value="2" /><label for="star2">2 stars</label>
+  <input type="radio" id="star1" formControlName="rating" value="1" /><label for="star1">1 star</label>
+</div>
+  </div>
+</div>
+  <div class="row">
+    <input type="submit" value="submit" name="submit" class="txt2 " style="float: left;">
+  </div>
+</form></div>
+    </div>
+  </div>
+</div>
+</div>
 
